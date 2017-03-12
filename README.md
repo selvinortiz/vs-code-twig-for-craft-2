@@ -8,6 +8,11 @@ Thank you, Ben👍
 
 ## Changelog
 
+### 0.2.0
+- Added branding resources
+- Added extension and repository metadata
+- Fixed issue where snippets were not triggering suggestions
+
 ### 0.1.0
 - Initial (alpha) release
 
