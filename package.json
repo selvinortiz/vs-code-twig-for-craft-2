@@ -2,7 +2,7 @@
     "name": "twig-for-craft-2",
     "displayName": "Twig for Craft 2",
     "description": "Adds a comprehensive set of Craft 2 snippets to use in your Twig templates.",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "publisher": "selvinortiz",
     "author": {
         "name": "Selvin Ortiz",
@@ -24,8 +24,10 @@
     },
     "keywords": [
         "twig",
+        "craft",
         "craftcms",
         "snippets",
+        "snippet",
         "vscode"
     ],
     "engines": {
