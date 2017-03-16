@@ -100,7 +100,7 @@ endincludehirescss       {% endincludehirescss %}
 endincludejs             {% endincludejs %}
 endnav                   {% endnav %}
 
-ciel                     ceil()
+ceil                     ceil()
 floor                    floor()
 max                      max()
 min                      min()
