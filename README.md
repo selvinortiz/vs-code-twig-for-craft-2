@@ -61,6 +61,9 @@ categories, categorieso  craft.categories loop
 entries, entrieso        craft.entries loop
 feed                     craft.feeds.getFeedItems loop
 t                        |t
+repl                     |replace('search', 'replace')
+regrepl                  |replace('/(search)/i', 'replace')
+split                    |split('\n')
 tags, tagso              craft.tags loop
 users, userso            craft.users loop
 
@@ -76,6 +79,7 @@ includejsfile            {% includeJsFile "/resources/js/global.js" %}
 matrix, matrixif         Basic Matrix field loop using if statements
 matrixifelse             Basic Matrix field loop using if/elseif
 matrixswitch             Basic Matrix field loop using switch
+loginform                Basic Login form
 nav                      {% nav item in items %}...{% endnav %}
 paginate                 Outputs example of pagination and prev/next links
 redirect                 {% redirect 'login' %}
@@ -106,6 +110,7 @@ max                      max()
 min                      min()
 round                    round()
 shuffle                  shuffle()
+random                   random()
 url, urla                url('path'), url('path', params, 'http', false)
 
 dd                      <pre>{{ dump() }}</pre>{% exit %}

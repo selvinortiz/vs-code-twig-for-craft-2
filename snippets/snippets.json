@@ -59,10 +59,16 @@
         "description": "ceil",
         "scope": "text.html.twig"
     },
+    "loginform": {
+        "prefix": "loginform",
+        "body": "<form method=\"post\" accept-charset=\"UTF-8\">\n\t{{ getCsrfInput() }}\n\t<input type=\"hidden\" name=\"action\" value=\"users/login\">\n\t<input type=\"hidden\" name=\"redirect\" value=\"{{entry.url}}\">\n\t<label for=\"loginName\">Username or email</label>\n\t<input id=\"loginName\" type=\"text\" name=\"loginName\" value=\"{{ craft.session.rememberedUsername }}\">\n\t<label for=\"password\">Password</label>\n\t<input id=\"password\" type=\"password\" name=\"password\">\n\t<label>\n\t\t<input type=\"checkbox\" name=\"rememberMe\" value=\"1\"> Remember me\n\t</label>\n\t<input type=\"submit\" value=\"Login\">\n\t{% if errorMessage is defined %}\n\t\t<p>{{ errorMessage }}</p>\n\t{% endif %}\n</form>",
+        "description": "craft.user - basic loginform",
+        "scope": "text.html.twig"
+    },
     "assetso": {
         "prefix": "assetso",
         "body": "{% set assets = craft.assets({\n\tsourceId: '${1:1}',\n\tkind:     '${2:image}',\n\tlimit:    ${3:10}\n}) %}\n\n{% for image in assets %}\n\t<img src=\"{{ image.url${4:('${5:thumb}')} }}\" width=\"${6:200}\" height=\"${7:200}\" alt=\"{{ image.title }}\">\n{% endfor %}\n$0",
-        "description": "craft.assets - object sytnax",
+        "description": "craft.assets - object syntax",
         "scope": "text.html.twig"
     },
     "categorieso": {
@@ -129,6 +135,21 @@
         "prefix": "t",
         "body": "{{ $1|t }}$0",
         "description": "translate with |t"
+    },
+    "repl": {
+        "prefix": "repl",
+        "body": "{{ ${1:$TM_SELECTED_TEXT} | replace('search', 'replace') }}$0",
+        "description": "replace with | replace('search', 'replace')"
+    },
+    "regrepl": {
+        "prefix": "regrepl",
+        "body": "{{ ${1:$TM_SELECTED_TEXT} | replace('/(search)/i', 'replace') }}$0",
+        "description": "regex replace with | replace('/(search)/i', 'replace')"
+    },
+    "split": {
+        "prefix": "split",
+        "body": "{{ ${1:$TM_SELECTED_TEXT} | split('\\n') }}$0",
+        "description": "split on | split ('\\n')"
     },
     "tagso": {
         "prefix": "tagso",
@@ -631,6 +652,12 @@
         "prefix": "shuffle",
         "body": "shuffle($1)$0",
         "description": "shuffle",
+        "scope": "text.html.twig"
+    },
+    "random": {
+        "prefix": "random",
+        "body": "random($1)$0",
+        "description": "random",
         "scope": "text.html.twig"
     },
     "spaceless": {
