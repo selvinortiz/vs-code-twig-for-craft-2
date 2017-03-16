@@ -53,10 +53,10 @@
         "description": "children",
         "scope": "text.html.twig"
     },
-    "ciel": {
-        "prefix": "ciel",
+    "ceil": {
+        "prefix": "ceil",
         "body": "ceil($1)$0",
-        "description": "ciel",
+        "description": "ceil",
         "scope": "text.html.twig"
     },
     "assetso": {
