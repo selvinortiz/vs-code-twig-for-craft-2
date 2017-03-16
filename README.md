@@ -1,8 +1,6 @@
 # Twig for Craft 2
 > Adds a comprehensive set of Craft 2 snippets to use in your Twig templates.
 
----
-
 ## Tab Trigger Reference
 
 ### Generic Triggers
@@ -140,6 +138,12 @@ This extension is _heavily_ influenced by the amazing work of [Ben Parizek] on [
 Thank you, Ben👍
 
 ## Changelog
+
+### 0.4.0
+- Fixed wrong path used in `includejs`
+- Renamed `ciel` to `ceil` where necessary
+
+Thank you, [Dominic](https://github.com/DominicVonk) 👍
 
 ### 0.3.0
 - Added full tab trigger reference table
