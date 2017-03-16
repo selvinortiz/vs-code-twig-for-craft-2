@@ -72,7 +72,7 @@ includecss               {% includecss %}...{% endincludecss %}
 includecssfile           {% includeCssFile "/resources/css/global.css" %}
 includehirescss          {% includehirescss %}...{% endincludehirescss %}
 includejs                {% includejs %}...{% endincludejs %}
-includejsfile            {% includeJsFile "/resources/css/global.css" %}
+includejsfile            {% includeJsFile "/resources/js/global.js" %}
 matrix, matrixif         Basic Matrix field loop using if statements
 matrixifelse             Basic Matrix field loop using if/elseif
 matrixswitch             Basic Matrix field loop using switch
