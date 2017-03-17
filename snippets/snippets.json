@@ -59,45 +59,45 @@
         "description": "ceil",
         "scope": "text.html.twig"
     },
-    "loginform": {
-        "prefix": "loginform",
+    "formlogin": {
+        "prefix": "formlogin",
         "body": "<form method=\"post\" accept-charset=\"UTF-8\">\n\t{{ getCsrfInput() }}\n\t<input type=\"hidden\" name=\"action\" value=\"users/login\">\n\n\t<h3><label for=\"loginName\">Username or email</label></h3>\n\t<input id=\"loginName\" type=\"text\" name=\"loginName\"\n\t\tvalue=\"{{ craft.session.rememberedUsername }}\">\n\n\t<h3><label for=\"password\">Password</label></h3>\n\t<input id=\"password\" type=\"password\" name=\"password\">\n\n\t<label>\n\t\t<input type=\"checkbox\" name=\"rememberMe\" value=\"1\">\n\t\tRemember me\n\t</label>\n\n\t<input type=\"submit\" value=\"Login\">\n\n\t{% if errorMessage is defined %}\n\t\t<p>{{ errorMessage }}</p>\n\t{% endif %}\n</form>\n\n<p><a href=\"{{ url('forgotpassword') }}\">Forget your password?</a></p>",
         "description": "craft.user - example login form",
         "scope": "text.html.twig"
     },
-    "userprofileform": {
-        "prefix": "userprofileform",
+    "formuserprofile": {
+        "prefix": "formuserprofile",
         "body": "<form method=\"post\" accept-charset=\"UTF-8\">\n\t{{ getCsrfInput() }}\n\t<input type=\"hidden\" name=\"action\" value=\"users/saveUser\">\n\t<input type=\"hidden\" name=\"redirect\" value=\"users/{{ currentUser.username }}\">\n\t<input type=\"hidden\" name=\"userId\" value=\"{{ currentUser.id }}\">\n\n\t<label for=\"location\">Location</label>\n\t<input type=\"text\" id=\"location\" name=\"fields[location]\" value=\"{{ currentUser.location }}\">\n\n\t<label for=\"bio\">Bio</label>\n\t<textarea id=\"bio\" name=\"fields[bio]\">{{ currentUser.bio }}</textarea>\n\n\t<input type=\"submit\" value=\"Save Profile\">\n</form>",
         "description": "craft.user - example user profile form",
         "scope": "text.html.twig"
     },
 
-    "userregistrationform": {
-        "prefix": "userregistrationform",
+    "formuserregistration": {
+        "prefix": "formuserregistration",
         "body": "<form method=\"post\" accept-charset=\"UTF-8\">\n\t{{ getCsrfInput() }}\n\t<input type=\"hidden\" name=\"action\" value=\"users/saveUser\">\n\t<input type=\"hidden\" name=\"redirect\" value=\"\">\n\n\t{% macro errorList(errors) %}\n\t\t{% if errors %}\n\t\t\t<ul class=\"errors\">\n\t\t\t\t{% for error in errors %}\n\t\t\t\t\t<li>{{ error }}</li>\n\t\t\t\t{% endfor %}\n\t\t\t</ul>\n\t\t{% endif %}\n\t{% endmacro %}\n\n\t{% from _self import errorList %}\n\n\t<h3><label for=\"username\">Username</label></h3>\n\t<input id=\"username\" type=\"text\" name=\"username\"\n\t\t{%- if account is defined %} value=\"{{ account.username }}\"{% endif -%}>\n\n\t{% if account is defined %}\n\t\t{{ errorList(account.getErrors('username')) }}\n\t{% endif %}\n\n\t<h3><label for=\"email\">Email</label></h3>\n\t<input id=\"email\" type=\"text\" name=\"email\"\n\t\t{%- if account is defined %} value=\"{{ account.email }}\"{% endif %}>\n\n\t{% if account is defined %}\n\t\t{{ errorList(account.getErrors('email')) }}\n\t{% endif %}\n\n\t<h3><label for=\"password\">Password</label></h3>\n\t<input id=\"password\" type=\"password\" name=\"password\">\n\n\t{% if account is defined %}\n\t\t{{ errorList(account.getErrors('password')) }}\n\t{% endif %}\n\n\t<input type=\"submit\" value=\"Register\">\n</form>",
         "description": "craft.user - example user registration form",
         "scope": "text.html.twig"
     },
-    "forgotpasswordform": {
-        "prefix": "forgotpasswordform",
+    "formforgotpassword": {
+        "prefix": "formforgotpassword",
         "body": "<form method=\"post\" accept-charset=\"UTF-8\">\n\t{{ getCsrfInput() }}\n\t<input type=\"hidden\" name=\"action\" value=\"users/forgotPassword\">\n\t<input type=\"hidden\" name=\"redirect\" value=\"\">\n\n\t<h3><label for=\"loginName\">Username or email</label></h3>\n\t<input id=\"loginName\" type=\"text\" name=\"loginName\"\n\t\tvalue=\"{% if loginName is defined %}{{ loginName }}{% else %}{{ craft.session.rememberedUsername }}{% endif %}\">\n\n\t{% if errors is defined %}\n\t\t<ul class=\"errors\">\n\t\t\t{% for error in errors %}\n\t\t\t\t<li>{{ error }}</li>\n\t\t\t{% endfor %}\n\t\t</ul>\n\t{% endif %}\n\n\t<input type=\"submit\" value=\"Submit\">\n</form>",
         "description": "craft.user - example forgot password form",
         "scope": "text.html.twig"
     },
-    "setpasswordform": {
-        "prefix": "setpasswordform",
+    "formsetpassword": {
+        "prefix": "formsetpassword",
         "body": "<form method=\"post\" accept-charset=\"UTF-8\">\n\t{{ getCsrfInput() }}\n\t<input type=\"hidden\" name=\"action\" value=\"users/setPassword\">\n\t<input type=\"hidden\" name=\"code\" value=\"{{ code }}\">\n\t<input type=\"hidden\" name=\"id\" value=\"{{ id }}\">\n\n\t<h3><label for=\"newPassword\">New Password</label></h3>\n\t<input id=\"newPassword\" type=\"password\" name=\"newPassword\">\n\t{% if errors is defined %}\n\t\t<ul class=\"errors\">\n\t\t\t{% for error in errors %}\n\t\t\t\t<li>{{ error }}</li>\n\t\t\t{% endfor %}\n\t\t</ul>\n\t{% endif %}\n\n\t<input type=\"submit\" value=\"Submit\">\n</form>",
         "description": "craft.user - example set password form",
         "scope": "text.html.twig"
     },
-    "searchform": {
-        "prefix": "searchform",
+    "formsearch": {
+        "prefix": "formsearch",
         "body": "<form action=\"{{ url('search/results') }}\">\n\t<input type=\"search\" name=\"q\" placeholder=\"Search\">\n\t<input type=\"submit\" value=\"Go\">\n</form>",
         "description": "craft.entries - example search form",
         "scope": "text.html.twig"
     },
-    "searchformr": {
-        "prefix": "searchformr",
+    "formsearchresults": {
+        "prefix": "formsearchresults",
         "body": "<h1>Search Results</h1>\n\n{% set query = craft.request.getParam('q') %}\n{% set entries = craft.entries.search(query).order('score') %}\n\n{% if entries|length %}\n\t<p>{{ entries|length }} results:</p>\n\n\t<ul>\n\t\t{% for entry in entries %}\n\t\t\t<li><a href=\"{{ entry.url }}\">{{ entry.title }}</a></li>\n\t\t{% endfor %}\n\t</ul>\n{% else %}\n\t<p>Your search for “{{ query }}” didn’t return any results.</p>\n{% endif %}",
         "description": "craft.entries - example search results",
         "scope": "text.html.twig"

@@ -77,14 +77,6 @@ includejsfile            {% includeJsFile "/resources/js/global.js" %}
 matrix, matrixif         Basic Matrix field loop using if statements
 matrixifelse             Basic Matrix field loop using if/elseif
 matrixswitch             Basic Matrix field loop using switch
-loginform                Example login form
-userprofileform          Example user profile form
-userregistrationform     Example user registration form
-forgotpasswordform       Example forgot password form
-setpasswordform          Example set password form
-searchform               Example search form
-searchformr              Example search form results
-rss                      Example rss feed
 nav                      {% nav item in items %}...{% endnav %}
 paginate                 Outputs example of pagination and prev/next links
 redirect                 {% redirect 'login' %}
@@ -117,6 +109,15 @@ round                    round()
 shuffle                  shuffle()
 random                   random()
 url, urla                url('path'), url('path', params, 'http', false)
+
+formlogin                Example login form
+formuserprofile          Example user profile form
+formuserregistration     Example user registration form
+formforgotpassword       Example forgot password form
+formsetpassword          Example set password form
+formsearch               Example search form
+formsearchresults        Example search form results
+rss                      Example rss feed
 
 dd                      <pre>{{ dump() }}</pre>{% exit %}
 dump                    <pre>{{ dump() }}</pre>
