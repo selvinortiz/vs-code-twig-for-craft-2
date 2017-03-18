@@ -110,6 +110,14 @@ shuffle                  shuffle()
 random                   random()
 url, urla                url('path'), url('path', params, 'http', false)
 
+rss                      Example rss feed
+
+dd                      <pre>{{ dump() }}</pre>{% exit %}
+dump                    <pre>{{ dump() }}</pre>
+```
+
+### Example Forms
+```
 formlogin                Example login form
 formuserprofile          Example user profile form
 formuserregistration     Example user registration form
@@ -117,10 +125,6 @@ formforgotpassword       Example forgot password form
 formsetpassword          Example set password form
 formsearch               Example search form
 formsearchresults        Example search form results
-rss                      Example rss feed
-
-dd                      <pre>{{ dump() }}</pre>{% exit %}
-dump                    <pre>{{ dump() }}</pre>
 ```
 
 ### Reference Hints
@@ -146,6 +150,12 @@ This extension is _heavily_ influenced by the amazing work of [Ben Parizek] on [
 Thank you, Ben👍
 
 ## Changelog
+
+### 0.5.0
+- Added `random`, `replace`, `replacex`, and `split`
+- Added a bunch of useful _example form_ based on the Craft docs
+
+Big thanks to [Dominic](https://github.com/DominicVonk) 👍
 
 ### 0.4.0
 - Fixed wrong path used in `includejs`
